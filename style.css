@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+}
+
+/* 左上角 LOGO */
+.logo {
+    display: flex;
+  align-items: center;   /* 垂直居中 */
+}
+
+.logo-img {
+  width: 40px;          /* 控制logo大小 */
+  height: 40px;
+  margin-right: 10px;   /* 和文字间距 */
+}
+
+/* 右上角导航 */
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* 首屏大横幅 */
+.hero {
+    background-image: url("nusumituki/beijing.png");  /* 你的图片文件名 */
+  background-size: cover;           /* 铺满整个区域 */
+  background-position: center;      /* 居中显示 */
+  background-repeat: no-repeat;     /* 不重复 */
+
+  color: #fff;
+  padding: 80px 40px;
+}
+
+/* 简介整体布局 */
+.profile {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  align-items: center;
+}
+
+/* 头像 */
+.icon {
+  width: 300px;
+  height: auto;
+  border-radius: 0;
+}
+
+/* 文字区域 */
+.text h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 46px;
+  letter-spacing: 4px;
+  color: #ffffff;
+
+  /* 东方风关键：淡淡的光晕 */
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.6),
+    0 0 20px rgba(180,220,255,0.5);
+
+  margin-bottom: 20px;
+}
+
+/* 分类说明 */
+.dept {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 外部链接 */
+.link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* SNS 区域 */
+.sns {
+  margin-top: 20px;
+}
+
+.sns a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-right: 15px;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 22px;
+
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sns a:hover {
+  background: white;
+  color: #2f6fb3;
+  transform: scale(1.15);
+}
+
+
+
+
+/* 下方公告区域 */
+.news {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+}
+
+
+/*store区域*/
+.store-title {
+  font-size: 50px;
+  text-align: center;
+}
+
+/* 商品区域 */
+.store {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+/* 商品卡片 */
+.item {
+  width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 商品图片 */
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 按钮 */
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #2f6fb3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buy-btn:hover {
+  background: #1d4f85;
+}
