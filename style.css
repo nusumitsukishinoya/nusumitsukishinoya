@@ -1,180 +1,444 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+/* ====================================
+   全局
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background: #f5f5f5;
-  color: #333;
+body{
+    background:#f5f5f5;
+    color:#333;
+    font-family:
+    "Noto Sans JP",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
 
-/* 顶部导航栏 */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #fff;
+/* ====================================
+   Header
+==================================== */
+
+.header{
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:rgba(255,255,255,0.95);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #eaeaea;
 }
 
-/* 左上角 LOGO */
-.logo {
-    display: flex;
-  align-items: center;   /* 垂直居中 */
+.logo{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:20px;
 }
 
-.logo-img {
-  width: 40px;          /* 控制logo大小 */
-  height: 40px;
-  margin-right: 10px;   /* 和文字间距 */
+.logo-img{
+    width:42px;
+    height:42px;
+    margin-right:12px;
 }
 
-/* 右上角导航 */
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
+.nav{
+    display:flex;
+    gap:25px;
 }
 
-/* 首屏大横幅 */
-.hero {
-    background-image: url("nusumituki/beijing.png");  /* 你的图片文件名 */
-  background-size: cover;           /* 铺满整个区域 */
-  background-position: center;      /* 居中显示 */
-  background-repeat: no-repeat;     /* 不重复 */
+.nav a{
+    text-decoration:none;
+    color:#333;
 
-  color: #fff;
-  padding: 80px 40px;
+    transition:.3s;
 }
 
-/* 简介整体布局 */
-.profile {
-  display: flex;
-  max-width: 900px;
-  margin: auto;
-  align-items: center;
+.nav a:hover{
+    color:#5d84b3;
 }
 
-/* 头像 */
-.icon {
-  width: 300px;
-  height: auto;
-  border-radius: 0;
+/* ====================================
+   Hero
+==================================== */
+
+.hero{
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.35)
+    ),
+    url("nusumituki/beijing.png");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:90px 40px;
 }
 
-/* 文字区域 */
-.text h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 46px;
-  letter-spacing: 4px;
-  color: #ffffff;
+.profile{
 
-  /* 东方风关键：淡淡的光晕 */
-  text-shadow:
-    0 0 8px rgba(255,255,255,0.6),
-    0 0 20px rgba(180,220,255,0.5);
+    max-width:1100px;
 
-  margin-bottom: 20px;
+    margin:auto;
+
+    display:flex;
+    gap:50px;
+
+    align-items:center;
 }
 
-/* 分类说明 */
-.dept {
-  font-weight: bold;
-  margin-bottom: 15px;
+.icon{
+
+    width:320px;
+
+    height:auto;
+
+    filter:
+    drop-shadow(0 0 20px rgba(255,255,255,.2));
 }
 
-/* 外部链接 */
-.link a {
-  color: #fff;
-  text-decoration: underline;
+/* ====================================
+   文字
+==================================== */
+
+.text{
+    color:white;
 }
 
-/* SNS 区域 */
-.sns {
-  margin-top: 20px;
+.text h1{
+
+    font-family:'Noto Serif JP', serif;
+
+    font-size:52px;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 12px rgba(255,255,255,.4);
 }
 
-.sns a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.dept{
 
-  width: 48px;
-  height: 48px;
+    font-size:18px;
 
-  margin-right: 15px;
+    line-height:1.8;
 
-  border-radius: 50%;
-  background: rgba(255,255,255,0.15);
-  color: white;
-  font-size: 22px;
-
-  text-decoration: none;
-  transition: 0.3s;
+    margin-bottom:25px;
 }
 
-.sns a:hover {
-  background: white;
-  color: #2f6fb3;
-  transform: scale(1.15);
+/* ====================================
+   卡片
+==================================== */
+
+.shop-section,
+.sns-section{
+    margin-top:35px;
 }
 
+.shop-section h3,
+.sns-section h3{
 
+    margin-bottom:15px;
 
+    color:white;
 
-/* 下方公告区域 */
-.news {
-  max-width: 900px;
-  margin: 60px auto;
-  background: #fff;
-  padding: 40px;
+    font-size:20px;
 }
 
+.shop-buttons,
+.sns-buttons{
 
-/*store区域*/
-.store-title {
-  font-size: 50px;
-  text-align: center;
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
 }
 
-/* 商品区域 */
-.store {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px;
-  flex-wrap: wrap;
+.shop-buttons a,
+.sns-buttons a{
+
+    width:260px;
+    height:90px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.3s;
 }
 
-/* 商品卡片 */
-.item {
-  width: 250px;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.shop-buttons a:hover,
+.sns-buttons a:hover{
+
+    transform:
+    translateY(-5px);
+
+    background:
+    rgba(255,255,255,.25);
 }
 
-/* 商品图片 */
-.item img {
-  width: 100%;
-  border-radius: 10px;
+.shop-logo,
+.sns-logo{
+
+    width:220px;
+    height:60px;
+
+    object-fit:contain;
 }
 
-/* 按钮 */
-.buy-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background: #2f6fb3;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.etsy-logo{
+
+    width:160px;
 }
 
-.buy-btn:hover {
-  background: #1d4f85;
+/* ====================================
+   News
+==================================== */
+
+.news{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+.news h2{
+
+    margin-bottom:20px;
+
+    border-left:5px solid #5d84b3;
+
+    padding-left:15px;
+}
+
+.news p{
+
+    line-height:2;
+}
+
+/* ====================================
+   通用页面
+==================================== */
+
+.page-container{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+.page-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.page-title h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.page-title p{
+
+    color:#777;
+}
+
+/* ====================================
+   表单
+==================================== */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+}
+
+textarea{
+
+    min-height:160px;
+
+    resize:vertical;
+}
+
+button{
+
+    background:#5d84b3;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#44678f;
+}
+
+/* ====================================
+   Store
+==================================== */
+
+.store{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    justify-content:center;
+}
+
+.item{
+
+    width:280px;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+}
+
+.item img{
+
+    width:100%;
+}
+
+.item h3{
+
+    padding:15px;
+}
+
+.buy-btn{
+
+    display:block;
+
+    margin:15px;
+
+    padding:10px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#5d84b3;
+
+    color:white;
+
+    border-radius:8px;
+}
+
+/* ====================================
+   手机
+==================================== */
+
+@media(max-width:900px){
+
+    .profile{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .icon{
+
+        width:220px;
+    }
+
+    .text h1{
+
+        font-size:38px;
+    }
+
+    .nav{
+
+        gap:10px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .shop-buttons,
+    .sns-buttons{
+
+        justify-content:center;
+    }
 }
